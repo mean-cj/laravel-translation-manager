@@ -14,7 +14,7 @@ class AddSrcReferenceColumnToTranslations extends Migration
     public
     function up()
     {
-        Schema::table('ltm_translations', function (Blueprint $table)
+        Schema::table('ltm_translations', function ($table)
         {
             $table->string('source', 256)->nullable();
             $table->unique(['locale','group','key'], 'ixk_ltm_translations_locale_group_key');
@@ -29,7 +29,7 @@ class AddSrcReferenceColumnToTranslations extends Migration
     public
     function down()
     {
-        Schema::table('ltm_translations', function (Blueprint $table)
+        Schema::table('ltm_translations', function ($table)
         {
             $table->dropColumn('source');
             $table->dropIndex('ixk_ltm_translations_locale_group_key');
