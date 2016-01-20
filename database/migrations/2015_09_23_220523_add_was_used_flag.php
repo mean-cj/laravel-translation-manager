@@ -12,7 +12,7 @@ class AddWasUsedFlag extends Migration
      */
     public function up()
     {
-        Schema::table('ltm_translations', function (Blueprint $table)
+        Schema::table('ltm_translations', function ( $table)
         {
             $table->tinyInteger('was_used')->default(0);
         });
@@ -25,7 +25,7 @@ class AddWasUsedFlag extends Migration
      */
     public function down()
     {
-        Schema::table('ltm_translations', function (Blueprint $table)
+        Schema::table('ltm_translations', function ( $table)
         {
             $table->dropColumn('was_used');
         });
