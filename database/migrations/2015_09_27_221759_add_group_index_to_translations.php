@@ -12,7 +12,7 @@ class AddGroupIndexToTranslations extends Migration
      */
     public function up()
     {
-        Schema::table('ltm_translations', function (Blueprint $table)
+        Schema::table('ltm_translations', function ( $table)
         {
             $table->index(['group'], 'ix_ltm_translations_group');
         });
@@ -25,7 +25,7 @@ class AddGroupIndexToTranslations extends Migration
      */
     public function down()
     {
-        Schema::table('ltm_translations', function (Blueprint $table)
+        Schema::table('ltm_translations', function ( $table)
         {
             $table->dropIndex('ix_ltm_translations_group');
         });
